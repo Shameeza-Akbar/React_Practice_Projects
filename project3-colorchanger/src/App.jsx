@@ -3,6 +3,7 @@ import "./App.css";
 
 function App() {
   const [color, setColor] = useState("yellow");
+  let bgColor = { backgroundColor: color };
   function Red() {
     setColor("red");
   }
@@ -35,7 +36,9 @@ function App() {
   }
   return (
     <>
-      <div className="box">My Box</div>
+      <div className="box" style={bgColor}>
+        My Box
+      </div>
       <h1>Change Box Color</h1>
       <button onClick={Red}>Red</button>
       <br />
